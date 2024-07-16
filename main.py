@@ -3,7 +3,7 @@ import pandas as pd
 import tensorflow as tf
 import joblib
 
-file = pd.read_csv('/home/ubuntu/packets.csv')
+file = pd.read_csv('packets.csv')
 print(file.head())
 
 from sklearn.preprocessing import MinMaxScaler
