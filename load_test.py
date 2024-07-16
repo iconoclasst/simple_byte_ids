@@ -4,7 +4,7 @@ import numpy as np
 
 file = pd.read_csv('packets.csv')
 print(file.head())
-
+ 
 from sklearn.preprocessing import MinMaxScaler
 
 data = file[['Tamanho do Pacote (bytes)', 'Porta de Origem', 'Porta de Destino']]

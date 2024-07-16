@@ -11,7 +11,7 @@ def normalize_packet(packet):
     packet_size = packet[0]
     src_port = packet[1]
     dst_port = packet[2]
-
+ 
     normalized_packet = scaler.transform([[packet_size, src_port, dst_port]])
     return normalized_packet
 
