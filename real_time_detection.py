@@ -29,12 +29,10 @@ def real_time_analysis(packet):
 
     if packet_size < 1200:
         normalized_packet = normalize_packet((packet_size, src_port, dst_port))
-
         reconstructed_packet = autoencoder.predict(normalized_packet)
-
         reconstruction_error = np.mean(np.power(normalized_packet - reconstructed_packet, 2))
-
         threshold = 0.11
+        
         if reconstruction_error > threshold:
             print(f"Anomalia detectada: {packet_size} bytes, srcport={src_port}, dstport={dst_port}, erro de reconstrução={reconstruction_error:.4f}")
         else:
